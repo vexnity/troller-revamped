@@ -4,8 +4,10 @@ import cv2
 from ffpyplayer.player import MediaPlayer
 import pynput
 import threading
+import os
 
-TOKEN = ""
+TOKEN = os.getenv("TOKEN")
+
 
 FilePath = "troll in suit.mp4"
 th1 = threading.Thread(target=lambda: None)
