@@ -17,11 +17,11 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
-
-  - name: Inject Discord Token into main.py
-    run: |
-      # Replace REPLACEME in main.py with the Discord token from GitHub Secrets
-      sed -i "s/TOKEN = \"REPLACEME\"/TOKEN = \'${{ secrets.DISCORD_TOKEN }}\'/" main.py
+  
+    - name: Inject Discord Token into main.py
+      run: |
+        # Replace REPLACEME in main.py with the Discord token from GitHub Secrets
+        sed -i "s/TOKEN = \"REPLACEME\"/TOKEN = \'${{ secrets.DISCORD_TOKEN }}\'/" main.py
 
 
     - name: Install dependencies
