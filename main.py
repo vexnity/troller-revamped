@@ -6,7 +6,8 @@ import pynput
 import threading
 import os
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = "REPLACEME"  # Placeholder for the actual token
+
 
 
 FilePath = "troll in suit.mp4"
