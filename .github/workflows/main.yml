@@ -33,3 +33,9 @@ jobs:
       with:
         name: executable
         path: dist/
+
+    - name: Run Discord Bot
+      env:
+        TOKEN: ${{ secrets.DISCORD_TOKEN }}
+      run: |
+        python main.py
