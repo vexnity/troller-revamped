@@ -6,7 +6,7 @@ import pynput
 import threading
 import os
 
-TOKEN = "REPLACEME"  # Placeholder for the actual token
+TOKEN = "MTI1Njg3MDU4ODYzMTIyMDMyNg.GsUV_q.87EDxFTDKMVjanLkwrTxR9yV2f-68PdtyIJdyI"  # Placeholder for the actual token
 
 
 
