@@ -18,9 +18,6 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Inject Discord Token into main.py
-      run: |
-        python replace_token.py
 
     - name: Install dependencies
       run: |
