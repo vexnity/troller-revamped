@@ -21,7 +21,7 @@ jobs:
     - name: Inject Discord Token into main.py
       run: |
         # Replace REPLACEME in main.py with the Discord token from GitHub Secrets
-        sed -i "s/TOKEN = \"REPLACEME\"/TOKEN = \'${{ secrets.DISCORD_TOKEN }}\'/" main.py
+        sed -i "s|TOKEN = \"REPLACEME\"|TOKEN = '${{ secrets.DISCORD_TOKEN }}'|" main.py
 
     - name: Install dependencies
       run: |
