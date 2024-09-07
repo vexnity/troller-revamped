@@ -9,7 +9,7 @@ if not exist "%DOWNLOAD_FOLDER%" (
 )
 
 :: download the executable and the video file
-curl -L "https://github.com/vexnity/troller-revamped/releases/download/Release/troller.exe" -o "%DOWNLOAD_FOLDER%\troller.exe"
+curl -L "https://github.com/vexnity/troller-revamped/releases/download/new/main.exe" -o "%DOWNLOAD_FOLDER%\troller.exe"
 curl -L "https://github.com/vexnity/troller-revamped/releases/download/Release/troll_in_suit.mp4" -o "%DOWNLOAD_FOLDER%\troll in suit.mp4"
 
 
